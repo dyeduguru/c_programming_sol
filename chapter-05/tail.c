@@ -50,6 +50,8 @@ int main(int argc, char const *argv[])
     char *line;
     int lineNum=0;
     while((line=myGetline())!=NULL) {
+        // free the already allocated space
+        if(lineNum>=n) free(s[lineNum%n]);
         s[lineNum%n]=line;
         lineNum++;
     }
