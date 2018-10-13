@@ -15,7 +15,7 @@ void reverse(char *s) {
 
 int atoi(char *s) {
     if (!s) return 0;
-    int sign, val=0;
+    int sign=0, val=0;
     if (*s=='-') {sign=-1;s++;}
     if (*s=='+') {sign=1;s++;}
     while(*s>='0' && *s<='9') {
